@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Badavath Rajeshwari's Cybersecurity, AI, ML and Web Development Portfolio">
+  <title>Badavath Rajeshwari | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    :focus-visible {
+      outline: 3px solid #0ea5e9;
+      outline-offset: 4px;
+    }
+
+    .sidebar {
+      position: fixed;
+      width: 240px;
+      height: 100vh;
+      background: #0f172a;
+      color: white;
+      padding: 30px 20px;
+      overflow-y: auto;
+    }
+
+    .logo {
+      color: #38bdf8;
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 35px;
+    }
+
+    .sidebar nav a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      padding: 13px;
+      margin: 7px 0;
+      border-radius: 8px;
+    }
+
+    .sidebar nav a:hover {
+      background: #1e293b;
+      color: #38bdf8;
+    }
+
+    .main {
+      margin-left: 240px;
+      padding: 30px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .status {
+      background: #dcfce7;
+      color: #166534;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: white;
+      padding: 45px;
+      border-radius: 18px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      margin-bottom: 12px;
+    }
+
+    .hero h2 {
+      color: #7dd3fc;
+      font-size: 21px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #38bdf8;
+      color: #082f49;
+      text-decoration: none;
+      padding: 11px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 5px 8px 5px 0;
+    }
+
+    .button:hover {
+      background: #bae6fd;
+    }
+
+    section {
+      margin-bottom: 30px;
+      scroll-margin-top: 20px;
+    }
+
+    section h2 {
+      font-size: 27px;
+      color: #0f172a;
+      margin-bottom: 18px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px #0f172a0d;
+      border-left: 4px solid #38bdf8;
+    }
+
+    .stat-card h3 {
+      font-size: 27px;
+      color: #0369a1;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 15px #0f172a0d;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 9px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .project-grid,
+    .certificate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .project,
+    .certificate {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px #0f172a0d;
+    }
+
+    .project h3,
+    .certificate h3 {
+      color: #0369a1;
+      margin-bottom: 10px;
+    }
+
+    .project p,
+    .certificate p {
+      color: #475569;
+    }
+
+    .contact-links a {
+      color: #0369a1;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 800px) {
+      .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+      }
+
+      .sidebar nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+
+      .sidebar nav a {
+        padding: 9px;
+      }
+
+      .main {
+        margin-left: 0;
+        padding: 18px;
+      }
+
+      .hero {
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">Rajeshwari.</div>
+
+    <nav aria-label="Portfolio navigation">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN DASHBOARD -->
+  <main class="main">
+
+    <div class="topbar">
+      <h2>My Portfolio Dashboard</h2>
+      <span class="status">● Open to Learning & Opportunities</span>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="dashboard">
+      <h1>Hi, I'm Badavath Rajeshwari</h1>
+
+      <h2>
+        Cybersecurity Student | AI & ML Enthusiast |
+        Aspiring Full Stack Developer
+      </h2>
+
+      <p>
+        I am a B.Tech Cybersecurity student interested in
+        Artificial Intelligence, Machine Learning, Full Stack
+        Web Development and secure application development.
+        I enjoy learning new technologies and building
+        practical projects to solve real-world problems.
+      </p>
+
+      <a class="button" href="#projects">View My Projects</a>
+      <a class="button" href="#contact">Contact Me</a>
+    </section>
+
+    <!-- DASHBOARD STATS -->
+    <section aria-label="Portfolio overview">
+      <div class="stats">
+
+        <div class="stat-card">
+          <h3>7.49</h3>
+          <p>CGPA / 10</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>2028</h3>
+          <p>Expected Graduation</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>AI + ML</h3>
+          <p>Areas of Interest</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Cyber</h3>
+          <p>Specialization</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Me</h2>
+
+      <div class="card">
+        <p>
+          Hello! I am Badavath Rajeshwari, currently pursuing
+          my Bachelor of Technology in Computer Science and
+          Engineering (Cybersecurity) at Malla Reddy Engineering
+          College for Women (MRECW).
+        </p>
+
+        <br>
+
+        <p>
+          I am passionate about Cybersecurity, Artificial
+          Intelligence, Machine Learning and Full Stack Web
+          Development. I am interested in creating responsive,
+          useful and secure web applications.
+        </p>
+
+        <br>
+
+        <p>
+          I enjoy learning new technologies, improving my
+          programming skills and working on practical projects.
+          My goal is to grow as a technology professional and
+          contribute to meaningful software solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
+
+      <div class="card">
+        <h3>Programming & Web Development</h3>
+        <br>
+
+        <div class="skill-list">
+          <span class="skill">Python</span>
+          <span class="skill">C</span>
+          <span class="skill">HTML5</span>
+          <span class="skill">CSS3</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">React.js</span>
+          <span class="skill">Flask</span>
+          <span class="skill">MySQL</span>
+          <span class="skill">Git & GitHub</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Cybersecurity, AI & Data</h3>
+        <br>
+
+        <div class="skill-list">
+          <span class="skill">Cybersecurity</span>
+          <span class="skill">Artificial Intelligence</span>
+          <span class="skill">Machine Learning</span>
+          <span class="skill">Data Analytics</span>
+          <span class="skill">Generative AI</span>
+          <span class="skill">Two-Factor Authentication</span>
+          <span class="skill">Security Log Analysis</span>
+        </div>
+      </div>
+
+      <p>
+        <strong>Note:</strong> 
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>My Projects</h2>
+
+      <div class="project-grid">
+
+        <article class="project">
+          <h3>SmartSIEM</h3>
+          <p>
+            AI-powered Security Information and Event Management
+            project focused on security log monitoring, threat
+            detection and incident response.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Password Strength Checker</h3>
+          <p>
+            A security tool that evaluates password strength
+            and provides feedback to encourage stronger passwords.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>2FA Authentication System</h3>
+          <p>
+            A project exploring two-factor authentication
+            to provide an additional layer of account security.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Data Quality Analysis Dashboard</h3>
+          <p>
+            A dashboard for identifying data quality issues
+            such as missing values, duplicate records and
+            invalid data.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Cybersecurity Incident Response Simulation</h3>
+          <p>
+            A simulation project for exploring security
+            incidents, investigation steps and response actions.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>File Copy Detection Monitor</h3>
+          <p>
+            A Python-based practice project focused on
+            monitoring file-copy activity.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Malware Image Detection</h3>
+          <p>
+            A project exploring image-based malware detection
+            concepts and machine learning applications.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Used Car Price Prediction</h3>
+          <p>
+            A machine learning practice project exploring
+            used-car price prediction from data.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Personal Portfolio Website</h3>
+          <p>
+            A responsive website presenting my profile,
+            technical skills, projects and contact information.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Data Analysis with Python</h3>
+          <p>
+            A practice project exploring data analysis
+            using Python and Pandas.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Gallery Webpage</h3>
+          <p>
+            A webpage project for displaying images in
+            an organized layout.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Blog Page</h3>
+          <p>
+            A practice webpage for presenting blog content
+            in a structured format.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Job Application Form</h3>
+          <p>
+            A form project using HTML input fields and
+            basic validation.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Login Attempt Control System</h3>
+          <p>
+            A security practice project exploring login
+            attempt limits and account protection.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>File Protection Utility</h3>
+          <p>
+            A practice project focused on basic file
+            protection concepts.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Email Risk Analyzer</h3>
+          <p>
+            A project exploring email risk indicators
+            and security awareness.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates">
+      <h2>Certificates & Learning</h2>
+
+      <div class="certificate-grid">
+
+        <article class="certificate">
+          <h3>Introduction to Cybersecurity</h3>
+          <p>Cisco Networking Academy</p>
+        </article>
+
+        <article class="certificate">
+          <h3>Python Essentials 1 & 2</h3>
+          <p>Cisco Networking Academy</p>
+        </article>
+
+        <article class="certificate">
+          <h3>C Essentials 1 & 2</h3>
+          <p>Cisco Networking Academy</p>
+        </article>
+
+        <article class="certificate">
+          <h3>C Advanced</h3>
+          <p>Cisco Networking Academy</p>
+        </article>
+
+        <article class="certificate">
+          <h3>JavaScript Essentials 2</h3>
+          <p>Cisco Networking Academy</p>
+        </article>
+
+        <article class="certificate">
+          <h3>Data Analytics Essentials</h3>
+          <p>Cisco Networking Academy</p>
+        </article>
+
+        <article class="certificate">
+          <h3>Introduction to Data Science</h3>
+          <p>Cisco Networking Academy</p>
+        </article>
+
+        <article class="certificate">
+          <h3>Generative AI Literacy</h3>
+          <p>Cisco Networking Academy</p>
+        </article>
+
+        <article class="certificate">
+          <h3>Digital Application Fundamentals</h3>
+          <p>Cisco Networking Academy</p>
+        </article>
+
+        <article class="certificate">
+          <h3>Digital Application Fundamentals (STEM)</h3>
+          <p>Cisco Networking Academy</p>
+        </article>
+
+        <article class="certificate">
+          <h3>Digital Marketing</h3>
+          <p>Cisco Networking Academy</p>
+        </article>
+
+        <article class="certificate">
+          <h3>JavaScript / Web Development Learning</h3>
+          <p>Practice and skill development</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="card">
+        <h3>Bachelor of Technology (B.Tech)</h3>
+
+        <p>
+          <strong>Branch:</strong>
+          Computer Science and Engineering (Cybersecurity)
+        </p>
+
+        <p>
+          <strong>College:</strong>
+          Malla Reddy Engineering College for Women (MRECW)
+        </p>
+
+        <p><strong>Expected Graduation:</strong> 2028</p>
+        <p><strong>CGPA:</strong> 7.49 / 10</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+
+      <div class="card contact-links">
+        <p>
+          I am interested in internship opportunities,
+          learning and connecting with professionals in technology.
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:rajeshwaribadavath476@gmail.com">
+            rajeshwaribadavath476@gmail.com
+          </a>
+        </p>
+
+        <br>
+
+        <p>
+          <strong>LinkedIn:</strong>
+          <a
+            href="https://www.linkedin.com/in/rajeshwari-badavath-951ba6343/"
+            target="_blank"
+            rel="noopener noreferrer">
+            View my LinkedIn Profile
+          </a>
+        </p>
+
+        <br>
+
+        <p>
+          <strong>GitHub:</strong>
+          <a
+            href=https://github.com/rajeshwaribadavath476-bot
+            target="_blank"
+            rel="noopener noreferrer">
+            View my GitHub Profile
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>Thank you for visiting my portfolio!</strong></p>
+      <p>© 2026 Badavath Rajeshwari</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
